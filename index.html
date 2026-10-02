@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This head section sets up the webpage.
+         The viewport makes the page responsive on phones.
+         The stylesheet link connects this page to my CSS file. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teodros's Fitness Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- This container holds the main content of my page.
+         It keeps everything organized and prevents the content
+         from becoming too wide on large screens. -->
+    <main class="container">
+
+        <!-- This heading introduces the topic of my webpage.
+             The paragraph explains what the page is about. -->
+        <header>
+            <h1>Teodros's Fitness Page</h1>
+            <p>Some of my favorite ways to stay active and healthy.</p>
+        </header>
+
+        <!-- This wrapper holds my four content sections.
+             It starts as one column on mobile.
+             Media queries change the number of columns on larger screens. -->
+        <div class="wrapper">
+
+            <!-- This section contains my responsive image.
+                 The image shrinks when the screen becomes smaller.
+                 The alt text describes the image for accessibility. -->
+            <section class="media-section">
+                <h2>Fitness</h2>
+
+                <img src="images/fitness.jpg"
+                     alt="Fitness and workout equipment"
+                     class="responsive-image">
+            </section>
+
+            <!-- This section contains an embedded YouTube video.
+                 The video wrapper makes the video resize with the screen
+                 instead of overflowing on smaller devices. -->
+            <section class="media-section">
+                <h2>Workout Video</h2>
+
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/UBMk30rjy0o"
+                        title="Workout video"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- This section describes weight lifting.
+                 It adds another piece of fitness content to my page.
+                 It moves into different columns on larger screens. -->
+            <section class="media-section">
+                <h2>Weight Lifting</h2>
+                <p>
+                    I enjoy weight lifting because it helps me become
+                    stronger and stay healthy.
+                </p>
+            </section>
+
+            <!-- This section describes boxing.
+                 It adds another fitness activity to my page.
+                 It also changes position when the layout changes. -->
+            <section class="media-section">
+                <h2>Boxing</h2>
+                <p>
+                    I enjoy boxing because it keeps me active
+                    and improves my fitness.
+                </p>
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

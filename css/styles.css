@@ -1,0 +1,107 @@
+/* This styles the whole webpage.
+   It removes the default spacing and gives the page a simple background.
+   The font-family controls what the text looks like. */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* This is the main container for my content.
+   max-width stops the page from getting too wide.
+   auto margins keep the container centered. */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* This wrapper controls the layout of my four sections.
+   On small screens, the sections start in one column.
+   The gap creates space between each section. */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* This styles each media section.
+   The white background separates each section from the page.
+   Padding adds space inside each section. */
+.media-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* This makes my image responsive.
+   max-width keeps the image inside its section.
+   height auto keeps the image's original proportions. */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* This wrapper makes the YouTube video responsive.
+   The 56.25% padding creates a 16:9 video shape.
+   position relative gives the iframe an area to fit inside. */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+/* This places the YouTube video inside its wrapper.
+   The video fills the available width and height.
+   This allows the video to resize with the screen. */
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* This is the tablet breakpoint.
+   At 600px and larger, the background changes to light blue.
+   The four sections change from one column to two columns. */
+@media (min-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* This is the desktop breakpoint.
+   At 900px and larger, the background changes to light green.
+   The sections change from two columns to three columns. */
+@media (min-width: 900px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* This is the large desktop breakpoint.
+   At 1200px and larger, the background changes to light pink.
+   The sections change from three columns to four columns. */
+@media (min-width: 1200px) {
+    body {
+        background-color: lightpink;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
